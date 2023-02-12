@@ -16,8 +16,8 @@ class CooldownTracker {
     add() {
         if (this.#cooldowns.length < this.limit) {
             this.#cooldowns.push(Date.now());
-            return true;
-        } else return false;
+            return false;
+        } else return true;
     }
 
     #sweep() {
